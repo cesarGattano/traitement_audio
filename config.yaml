@@ -1,0 +1,21 @@
+path:
+  raw: "/data/raw"
+  export: "/data/export"
+
+sounds:
+  voice:
+    name: "voice"
+    format: "mp3"
+    volume: 0
+
+  ambiance:
+    name: "ambiance"
+    format: "mp3"
+    volume: 0
+
+  walking:
+    name: "monster-footstep-on-gravel"
+    format: "mp3"
+    volume: 0
+    fade_in: 0
+
