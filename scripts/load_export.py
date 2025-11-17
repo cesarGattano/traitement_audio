@@ -19,9 +19,9 @@ def load_sound(
         AudioSegment: The audio contained in the file
     """
 
-    path_raw = config.get("path_raw")
-    if path_raw:
-        return AudioSegment.from_file(path_raw + name + "." + format, format=format)
+    path = config["path"]["raw"]
+    if path:
+        return AudioSegment.from_file(path + "/" + name + "." + format, format=format)
     else:
         raise Exception("Missing field 'path_raw' in config.yaml")
 
@@ -30,13 +30,11 @@ def load_voice(config: dict) -> AudioSegment:
     """Import the audio of a voice
 
     Args:
-        config (dict): _description_
+        config (dict): The configuration (config.yaml)
 
     Returns:
-        AudioSegment: _description_
+        AudioSegment: The audio contained of the file voice
     """
 
-
-    raw = config["raw"]
-    voice = raw["voice"]
+    voice = config["sounds"]["voice"]
     return load_sound(config, voice["name"], voice["format"])
