@@ -66,3 +66,26 @@ def load_walking(config: dict) -> AudioSegment:
 
     walking = config["sounds"]["walking"]
     return load_sound(config, walking["name"], walking["format"])
+
+
+def export_sound(
+    sound: AudioSegment,
+    config: dict,
+    name: str,
+    format: str,
+):
+    """Export an audio file named **name**.
+
+    Args:
+        config (dict): The configuration (config.yaml)
+        name (str): The file name
+
+    Raises:
+        Exception: *path_raw* key not in **config**
+    """
+
+    path = config["path"]["export"]
+    if path:
+        sound.export(out_f=path + "/" + name + "." + format, format=format)
+    else:
+        raise Exception("Missing field 'path: export' in config.yaml")
