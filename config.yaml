@@ -1,6 +1,6 @@
 path:
-  raw: "/data/raw"
-  export: "/data/export"
+  raw: "data/raw"
+  export: "data/export"
 
 sounds:
   voice:
@@ -14,8 +14,7 @@ sounds:
     volume: 0
 
   walking:
-    name: "monster-footstep-on-gravel"
+    name: "monster-footsteps-on-gravel"
     format: "mp3"
     volume: 0
     fade_in: 0
-
