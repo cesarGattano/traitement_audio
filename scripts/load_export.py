@@ -38,3 +38,31 @@ def load_voice(config: dict) -> AudioSegment:
 
     voice = config["sounds"]["voice"]
     return load_sound(config, voice["name"], voice["format"])
+
+
+def load_ambiance(config: dict) -> AudioSegment:
+    """Import the ambiance audio
+
+    Args:
+        config (dict): The configuration (config.yaml)
+
+    Returns:
+        AudioSegment: The audio contained of the file ambiance
+    """
+
+    ambiance = config["sounds"]["ambiance"]
+    return load_sound(config, ambiance["name"], ambiance["format"])
+
+
+def load_walking(config: dict) -> AudioSegment:
+    """Import the audio of a walking
+
+    Args:
+        config (dict): The configuration (config.yaml)
+
+    Returns:
+        AudioSegment: The audio contained of the file walking
+    """
+
+    walking = config["sounds"]["walking"]
+    return load_sound(config, walking["name"], walking["format"])
