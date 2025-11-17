@@ -1,0 +1,4 @@
+pydub==0.25.1
+PyYAML==6.0.3
+setuptools==80.9.0
+simpleaudio==1.0.4
