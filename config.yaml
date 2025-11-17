@@ -6,15 +6,15 @@ sounds:
   voice:
     name: "voice"
     format: "mp3"
-    volume: 0
+    volume: 10
 
   ambiance:
     name: "ambiance"
     format: "mp3"
-    volume: 0
+    volume: -20
 
   walking:
     name: "monster-footsteps-on-gravel"
     format: "mp3"
-    volume: 0
+    volume: -5
     fade_in: 0
